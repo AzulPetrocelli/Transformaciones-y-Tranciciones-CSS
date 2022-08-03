@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main-container {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    /* Elemento padre */
+    .container{
+      width: 100%;
+      height: auto;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      background-color: #c9cdd0;
+      background-image: linear-gradient(0deg, #c9cdd0 0%, #3a393c 100%);
+      border: 1px solid transparent;
+      /* Perspectiva */
+      perspective: 100px;
+    }
+
+    /* Elemento hijo */
+    .transform3D{
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      background-color: #00DBDE;
+      background-image: linear-gradient(45deg, #00DBDE 0%, #FC00FF 100%);
+      font-size: 2rem;
+      display: grid;
+      place-content: center;
+      cursor: pointer;
+
+      /*Transform-style*/
+      transform-style: preserve-3d;
+
+    }
+
+    /* Transformaciones */
+    .rotateX:hover {
+      transform: rotateX(30deg)
+    }
+    .rotateX_negative:hover {
+      transform: rotateX(-30deg)
+    }
+    .rotateY:hover {
+      transform: rotateY(30deg)
+    }
+    .rotateY_negative:hover {
+      transform: rotateY(-30deg)
+    }
+    .rotateZ:hover {
+      transform: rotateZ(30deg)
+    }
+    .rotateZ_negative:hover {
+      transform: rotateZ(-30deg)
+    }
+  </style>
+</head>
+<body>
+  <main class="main-container">
+    <div class="container">
+      <div class="transform3D rotateX">transform: rotateX(30deg)</div>
+    </div>
+    <div class="container">
+      <div class="transform3D rotateX_negative">transform: rotateX(-30deg)</div>
+    </div>
+    <div class="container">
+      <div class="transform3D rotateY">transform: rotateY(30deg)</div>
+    </div>
+    <div class="container">
+      <div class="transform3D rotateY_negative">transform: rotateY(-30deg)</div>
+    </div>
+    <div class="container">
+      <div class="transform3D rotateZ">transform: rotateZ(30deg)</div>
+    </div>
+    <div class="container">
+      <div class="transform3D rotateZ_negative">transform: rotateZ(-30deg)</div>
+    </div>
+  </main>
+</body>
+</html>
