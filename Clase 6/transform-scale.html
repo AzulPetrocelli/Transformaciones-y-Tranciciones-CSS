@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  .container div{
+    width: 200px;
+    height: 200px;
+  }
+
+  .shadow{
+    border: 1px solid transparent;
+    background-color: #c9cdd0;
+    background-image: linear-gradient(0deg, #c9cdd0 0%, #3a393c 100%);
+    border-radius: 50%;
+  }
+
+  .scale{
+    display: grid;
+    border-radius: 50%;
+    place-content: center;
+    font-size: 1.5rem;
+    background-color: #00DBDE;
+    background-image: linear-gradient(45deg, #00DBDE 0%, #FC00FF 100%);
+    cursor: pointer;
+  }
+
+  /* ¡Prueba con lo que quieras!! */
+  .ejeXY:hover {
+    transform: scale(1.2);
+  }
+
+  .ejeX:hover {
+    transform: scaleX(1.2);
+  }
+
+  .ejeY:hover {
+    transform: scaleY(1.2);
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="shadow">
+      <div class="scale ejeXY">scale: 1.2</div>
+    </div>
+
+    <div class="shadow">
+      <div class="scale ejeX">scaleX: 1.2</div>
+    </div>
+
+    <div class="shadow">
+      <div class="scale ejeY">scaleY: 1.2</div>
+    </div>
+  </div>
+</body>
+</html>

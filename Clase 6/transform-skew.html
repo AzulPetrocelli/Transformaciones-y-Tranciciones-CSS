@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  p {
+    font-size: 24px;
+    background-color: #00DBDE;
+    background-image: linear-gradient(45deg, #00DBDE 0%, #FC00FF 100%);
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin: 2rem 0 8rem 0;
+  }
+
+  .container div{
+    width: 200px;
+    height: 200px;
+  }
+
+  .shadow{
+    border: 1px solid transparent;
+    background-color: #c9cdd0;
+    background-image: linear-gradient(0deg, #c9cdd0 0%, #3a393c 100%);
+  }
+
+  .skew{
+    display: grid;
+    border: 1px solid black;
+    place-content: center;
+    font-size: 1.5rem;
+    background-color: #00DBDE;
+    background-image: linear-gradient(45deg, #00DBDE 0%, #FC00FF 100%);
+    cursor: pointer;
+
+  }
+
+  /* ¡Prueba con lo que quieras!! */
+  .ejeXY:hover {
+    transform: skew(20deg, 20deg);
+  }
+
+  .ejeX:hover {
+    transform: skewX(45deg);
+  }
+
+  .ejeY:hover {
+    transform: skewY(45deg);
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>deg se refiere a los grados de inclinacion</p>
+    <div class="shadow">
+      <div class="skew ejeXY">skew(20deg, 20deg)</div>
+    </div>
+
+    <div class="shadow">
+      <div class="skew ejeX">skewX (45deg)</div>
+    </div>
+
+    <div class="shadow">
+      <div class="skew ejeY">skewY (45deg)</div>
+    </div>
+  </div>
+
+</body>
+</html>
